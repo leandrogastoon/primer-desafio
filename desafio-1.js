@@ -34,3 +34,13 @@ for (let numero4 = 0; numero4 < 6; numero4++){
 }
 
 document.write(" termina el ciclo.");
+
+let numero5 = prompt("ingrese un numero del 1 al 15");
+
+if (numero5 <= 15) {
+    alert("hola")
+} else if (numero5 > 16){
+    alert("segui participando")
+} else{
+    alert("error")
+}
