@@ -16,7 +16,7 @@ function agregarAlumno(alumnos){
     alumnos.push(new alumno (nom,lastName,age));
     }
 
- let pregunta = prompt("seleccionar cuanto alumnos desea agregar");
+ let pregunta = prompt("seleccionar cuanto alumnos desea agregar 1, 2 o 3");
  
  if (pregunta == 1) {
     agregarAlumno(alumnos);   
@@ -27,7 +27,9 @@ function agregarAlumno(alumnos){
     agregarAlumno(alumnos);
     agregarAlumno(alumnos);
     agregarAlumno(alumnos);
+ } else {
+    alert("no se puede agregar mas de 3 alumnos")
  }
-
+     
 
 console.log(alumnos);
