@@ -1,13 +1,17 @@
-function buscarAlumno(nombre) {
- 
-if ( nombre == "Leandro") {
-    for (let i = 0; i <= 10; i++) {
-        console.log(i);
-    } console.log("El alumno ingresado es el correcto")
-} else {
-    console.log("El alumno ingresado no esta registrado")
-}
-return console.log(nombre);
-}
+// let alumno1 = prompt("nombre del alumno numero 1");
+// let alumno2 = prompt("nombre del alumno numero 2");
+// let alumno3 = prompt("nombre del alumno numero 3");
 
-buscarAlumno(prompt("Introducir nombre del Alumno"));
+// let alumnos = [alumno1, alumno2, alumno3];
+
+// function buscarAlumno(alumnos) {
+ 
+// if ( alumnos == alumno1 || alumnos == alumno2 || alumnos == alumno3){
+//     alert("El alumno ingresado es el correcto")
+// } else {
+//     alert("El alumno no esta registrado")
+// }
+// return;
+// }
+
+// buscarAlumno(prompt("Introducir nombre del Alumno"));
