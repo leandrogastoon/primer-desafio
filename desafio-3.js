@@ -18,17 +18,23 @@ function agregarAlumno(alumnos){
 
  let pregunta = prompt("seleccionar cuanto alumnos desea agregar 1, 2 o 3");
  
+ let oracion = document.getElementById("cantidad");
+
+
  if (pregunta == 1) {
-    agregarAlumno(alumnos);   
+    agregarAlumno(alumnos);
+    cantidad.innerText = "se ingreso un solo alumno"   
  } else if (pregunta == 2) {
     agregarAlumno(alumnos);
     agregarAlumno(alumnos);
+    cantidad.innerText = "se ingresaron dos alumnos"
  } else if (pregunta == 3) {
     agregarAlumno(alumnos);
     agregarAlumno(alumnos);
     agregarAlumno(alumnos);
+    cantidad.innerText = "se ingresaron 3 alumnos"
  } else {
-    alert("no se puede agregar mas de 3 alumnos")
+   cantidad.innerText = "No se han ingresado alumnos"
  }
      
 
