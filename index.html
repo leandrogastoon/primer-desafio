@@ -1,21 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio CoderHouse</title>
+
+    <link rel="stylesheet" href="estilo.css">
+
+    <title>ProyectoFinal</title>
 </head>
+
 <body>
-    <h1>Desafio 4</h1>
-    <h2>Hacer click en el boton para indicar la cantidad de alumnos a ingresar</h2>
-    <form id="formulario">
-        <input type="submit" value="Empezar" id="boton">
-    </form>
-    <h2 id="cantidad">Todavia no se ha ingresado ningun alumno</h2>
-    <script src="desafio-1.js"></script>
-    <script src="desafio-2.js"></script>
-    <script src="desafio-3.js"></script>
-    <script src="desafio-4.js"></script>
+    <!--pag de inicio de sesion-->
+    <div class="conteiner-1">
+        <div class="contForm">
+            <h1 class="inicioSesion">
+                Inicio de sesion
+            </h1>
+
+            <form id="formulario">
+                <div>
+                    <input type="email" placeholder="Email" name="" required="completar" id="email" class="inputText">
+                </div>
+                <div>
+                    <input type="password" placeholder="password" required="" id="password" class="inputText">
+                </div>
+                <div>
+                    <input type="submit" onclick="sesion(event)" value="Entrar" id="boton">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--pag primer contenido-->
+
+    <div class="contPrivado" id="contPrivado">
+        <form>
+            
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="proyectoFinal.js"></script>
 </body>
+
 </html>
