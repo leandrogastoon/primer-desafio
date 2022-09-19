@@ -35,11 +35,75 @@
         </div>
     </div>
     <!--pag primer contenido-->
+    <!--tabla-->
 
-    <div class="contPrivado" id="contPrivado">
-        <form>
+    <div class="contPrivad" id="contPrivado"> <!--agregar la ultima "o" a la clase asi funcina, lo saque para poder ver todo-->
+        <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        agregar alumno
+    </button>
 
-        </form>
+    <button type="button" class="btn btn-light" id="btnPromedio">Calcular Promedio</button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Agregar alumno</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addAlumno" class="notas"> <!--formulario del modal-->
+            <div>
+              <label for="">Alumno</label>
+              <input type="text" name="nombreAlumno">
+            </div>
+            <div>
+              <label for="">Materia</label>
+              <input type="text" name="materia">
+            </div>
+            <div>
+              <label for="">Nota 1ºt</label>
+              <input type="number" name="alumnoNota1">
+            </div>
+            <div>
+              <label for="">Nota 2ºt</label>
+              <input type="number" name="alumnoNota2">
+            </div>
+            <div>
+              <label for="">Nota 3ºt</label>
+              <input type="number" name="alumnoNota3">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" onclick="agregarAlumno()">Ingresar</button> <!--cambiar ese onclick y ponerlo en el js como se debe-->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+        <div class="table-responsive">
+            <table class="table table-dark table-striped" id="tablaNotas">
+                <thead>
+                  <tr>
+                    <th scope="col">Alumno</th>
+                    <th scope="col">Materia</th>
+                    <th scope="col">1º</th>
+                    <th scope="col">2º</th>
+                    <th scope="col">3º</th>
+                    <th scope="col">Prom. Final</th>
+                  </tr>
+                </thead>
+                <tbody class="tablaNueva">
+                  
+                </tbody>
+            </table>
+        </div>
     </div>
 
 

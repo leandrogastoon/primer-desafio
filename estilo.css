@@ -66,3 +66,7 @@ body{
 }
 
 /*estilo del contenido*/
+
+.form-select{
+    width: 150px;
+}

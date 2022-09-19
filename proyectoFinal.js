@@ -30,3 +30,66 @@ function tokenExistente(){                                                      
             return false;
         }
 }
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+class alumLista {
+    constructor(nombre, materia, nota1, nota2, nota3){
+        this.nombre = nombre;
+        this.materia = materia;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.nota3 = nota3;
+    }
+    
+}
+
+let alumnos = [];
+
+
+
+const tablaAlumn = document.querySelector("#tablaNotas tbody");
+
+listaActualizada();
+
+function agregarAlumno(){
+    const addAlumno = document.querySelector("#addAlumno");
+    const newAlumno = new alumLista(
+        addAlumno.nombreAlumno.value, 
+        addAlumno.materia.value, 
+        addAlumno.alumnoNota1.value, 
+        addAlumno.alumnoNota2.value, 
+        addAlumno.alumnoNota3.value
+        );
+    alumnos.push(newAlumno);
+    listaActualizada();
+}
+
+function listaActualizada(){
+    tablaAlumn.innerHTML="";
+    
+    alumnos.forEach(alumno => {
+        const tablaHTML = document.createElement("tr")
+        
+        tablaHTML.innerHTML = 
+        `<td id="nombreAlum">${alumno.nombre}</td>
+        <td id="materiaAlum">${alumno.materia}</td>
+        <td>${parseInt(alumno.nota1)}</td>
+        <td>${parseInt(alumno.nota2)}</td>
+        <td>${parseInt(alumno.nota3)}</td>
+        <td>${(parseInt(alumno.nota1) + parseInt(alumno.nota2) + parseInt(alumno.nota3)) / 3}</td>
+        `;
+        tablaAlumn.appendChild(tablaHTML);
+    });
+}
+
+const botonPromedio = document.querySelector("#btnPromedio");
+botonPromedio.addEventListener("click", calcularPromedio());
+
+function calcularPromedio(){
+
+}
+
+
+
+
