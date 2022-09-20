@@ -79,17 +79,19 @@ function listaActualizada(){
         <td>${parseInt(alumno.nota3)}</td>
         <td>${(parseInt(alumno.nota1) + parseInt(alumno.nota2) + parseInt(alumno.nota3)) / 3}</td>
         `;
-        tablaAlumn.appendChild(tablaHTML);
+        tablaAlumn.appendChild(tablaHTML); 
+        
+        
     });
 }
+ 
 
-const botonPromedio = document.querySelector("#btnPromedio");
-botonPromedio.addEventListener("click", calcularPromedio());
+const tablaNueva = document.querySelector(".tablaNueva"); //lo hice para limpiar la tabla , el evento onclick esta en el html del boton
 
-function calcularPromedio(){
-
-}
-
+ function btnTabla(event){
+            tablaNueva.innerHTML="";
+        } 
+        
 
 
 
