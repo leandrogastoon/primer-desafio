@@ -78,7 +78,29 @@ function listaActualizada(){
         <td>${parseInt(alumno.nota2)}</td>
         <td>${parseInt(alumno.nota3)}</td>
         <td>${(parseInt(alumno.nota1) + parseInt(alumno.nota2) + parseInt(alumno.nota3)) / 3}</td>
-        `;
+        `
+        if((parseInt(alumno.nota1) + parseInt(alumno.nota2) + parseInt(alumno.nota3)) / 3 >= 7){
+            tablaHTML.innerHTML = `
+            <td id="nombreAlum">${alumno.nombre}</td>
+            <td id="materiaAlum">${alumno.materia}</td>
+            <td>${parseInt(alumno.nota1)}</td>
+            <td>${parseInt(alumno.nota2)}</td>
+            <td>${parseInt(alumno.nota3)}</td>
+            <td>${(parseInt(alumno.nota1) + parseInt(alumno.nota2) + parseInt(alumno.nota3)) / 3}</td>
+            <td class="aprobado">APROBADO</td>`
+        } else {
+            tablaHTML.innerHTML = `
+            <td id="nombreAlum">${alumno.nombre}</td>
+            <td id="materiaAlum">${alumno.materia}</td>
+            <td>${parseInt(alumno.nota1)}</td>
+            <td>${parseInt(alumno.nota2)}</td>
+            <td>${parseInt(alumno.nota3)}</td>
+            <td>${(parseInt(alumno.nota1) + parseInt(alumno.nota2) + parseInt(alumno.nota3)) / 3}</td>
+            <td class="desaprobado">DESAPROBADO</td>`
+        };
+
+        
+
         tablaAlumn.appendChild(tablaHTML); 
         
         
