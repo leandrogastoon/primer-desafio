@@ -10,13 +10,43 @@ function sesion(event){
     const token = generateToken(valueEmail, valuePassword);                //variable que genera el token con la funcion generateToken()
     sessionStorage.setItem("token", token);                            //para ingresar el token al session/localstorage con la variable donde guardamos la generacion del token
 
+     
+
+    let timerInterval
+
+    Swal.fire({
+     title: 'Cargando...',
+     timer: 1000,
+     timerProgressBar: true,
+       didOpen: () => {
+         Swal.showLoading()
+           const b = Swal.getHtmlContainer().querySelector('b')
+           timerInterval = setInterval(() => {
+           b.textContent = Swal.getTimerLeft()
+    }, 100)
+  },
+      willClose: () => {
+       clearInterval(timerInterval)
+    }
+})
+
+ .then((result) => {
+  /* Read more about handling dismissals below */
+  if (result.dismiss === Swal.DismissReason.timer) {
+    
     const iniciar = tokenExistente();
+    
     if (iniciar) {
         const divPrivado = document.querySelector("#contPrivado");                      //en esta variable seleccionamos el div 
         const ocultar = document.querySelector(".conteiner-1");                    // en esta variable seleccionamos el div que contiene el formulario
         divPrivado.className = "contAbierto";                                 // aca cambiamos el nombre de la clase del div seleccionado
         ocultar.classList.replace("conteiner-1", "contPrivado");              // reemplaza la clase del div que contiene el formulario por la clase que tiene display none
     }
+
+  }
+
+})
+
 }
 
 function generateToken(email, password) {
@@ -112,6 +142,20 @@ const tablaNueva = document.querySelector(".tablaNueva"); //lo hice para limpiar
 
  function btnTabla(event){
             tablaNueva.innerHTML="";
+
+            Toastify({
+                text: "Tabla Limpia",               
+                duration: 3000,
+                gravity: "top",
+                position: "center", 
+                style: {
+                    background: "linear-gradient(to right, #6a11cb 0%, #2575fc 100%);",
+                  },
+                offset: {
+                    x: 50,
+                    y: 100
+                  }  
+                }).showToast();
         } 
         
 

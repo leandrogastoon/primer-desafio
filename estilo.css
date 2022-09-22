@@ -117,10 +117,24 @@ td.desaprobado{
 .btnAgregar{
     margin-left: 15px;
     font-size: 20px;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);   
 }
 
 .btnLimpiarTabla{
     font-size: 20px;
     float: right;
     margin-right: 20px;
+    background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+    color: whitesmoke;
+}
+
+.btnLimpiarTabla:hover{
+    color: whitesmoke;
+}
+
+.conteiner-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
 }
