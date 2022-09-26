@@ -68,6 +68,37 @@ body{
     display: block;
 }
 
+/*estilo modal*/
+
+.modal-content{
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+.inputModal{
+    margin-left: 60px;
+}
+
+.labelDatos{
+    color: whitesmoke;
+}
+
+.datos {
+    margin: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.btnModal {
+    color: whitesmoke;
+    background-color: #1c4283;
+}
+
+.inputMateria, .inputNombre{
+    margin-left: 28px;
+}
+
+
 /*estilo de la tabla*/
 
 .form-select{
@@ -138,3 +169,4 @@ td.desaprobado{
     justify-content: center;
     margin: 100px;
 }
+

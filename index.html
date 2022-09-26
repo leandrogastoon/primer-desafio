@@ -40,6 +40,7 @@
     <!--tabla-->
   <div class="conteiner-2">
      <div class="contPrivado" id="contPrivado"> <!--agregar la ultima "o" a la clase asi funcina, lo saque para poder ver todo-->
+
         <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary btnAgregar" data-bs-toggle="modal" data-bs-target="#exampleModal">
         agregar alumno
@@ -54,35 +55,41 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Datos</h5>
+          <h5 class="modal-title" id="exampleModalLabel" style="color:white;">Datos</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form id="addAlumno" class="notas"> <!--formulario del modal-->
-            <div>
-              <label for="">Alumno</label>
-              <input type="text" name="nombreAlumno" required="completar">
+          <form id="addAlumno" class="formDatos"> <!--formulario del modal-->
+
+            <div class="inputModal">
+              <label class="labelDatos" for="">Alumno </label>
+              <input type="text" name="nombreAlumno" required="completar" class="datos inputNombre">
             </div>
-            <div>
-              <label for="">Materia</label>
-              <input type="text" name="materia" required="completar">
+
+            <div class="inputModal">
+              <label class="labelDatos" for="">Materia </label>
+              <input type="text" name="materia" required="completar" class="datos inputMateria">
             </div>
-            <div>
-              <label for="">Nota 1ºt</label>
-              <input type="number" name="alumnoNota1" required="completar">
+
+            <div class="inputModal">
+              <label class="labelDatos" for="">Nota 1ºt</label>
+              <input type="number" name="alumnoNota1" required="completar" class="datos inputNota-1">
             </div>
-            <div>
-              <label for="">Nota 2ºt</label>
-              <input type="number" name="alumnoNota2" required="completar">
+            
+            <div class="inputModal">
+              <label class="labelDatos" for="">Nota 2ºt</label>
+              <input type="number" name="alumnoNota2" required="completar" class="datos inputNota-2">
             </div>
-            <div>
-              <label for="">Nota 3ºt</label>
-              <input type="number" name="alumnoNota3" required="completar">
+
+            <div class="inputModal">
+              <label class="labelDatos" for="">Nota 3ºt</label>
+              <input type="number" name="alumnoNota3" required="completar" class="datos inputNota-3">
             </div>
+
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" onclick="agregarAlumno()">Agregar</button> <!--cambiar ese onclick y ponerlo en el js como se debe-->
+          <button type="button" class="btn btnModal" onclick="agregarAlumno()">Agregar</button> <!--cambiar ese onclick y ponerlo en el js como se debe-->
         </div>
       </div>
     </div>

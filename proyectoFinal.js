@@ -42,8 +42,11 @@ function sesion(event){
     if (iniciar) {
         const divPrivado = document.querySelector("#contPrivado");                      //en esta variable seleccionamos el div 
         const ocultar = document.querySelector(".conteiner-1");                    // en esta variable seleccionamos el div que contiene el formulario
+        const navBar = document.querySelector(".opciones")                      //selecciona el navbar
+        
         divPrivado.className = "contAbierto";                                 // aca cambiamos el nombre de la clase del div seleccionado
         ocultar.classList.replace("conteiner-1", "contPrivado");              // reemplaza la clase del div que contiene el formulario por la clase que tiene display none
+        navBar.classList.replace("opciones", "navShow");                     // reemplaza la clase del nav para que aparezca
     }
 
   }
