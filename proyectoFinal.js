@@ -7,12 +7,15 @@ function sesion(event){
     let valueEmail = formulario.email.value;                               //agarra el valor del primer input
     let valuePassword = formulario.password.value;                       // agarra el valor del segundo input por su posicion index en el console.dir(formulario)
     
-    const token = generateToken(valueEmail, valuePassword);                //variable que genera el token con la funcion generateToken()
-    sessionStorage.setItem("token", token);                            //para ingresar el token al session/localstorage con la variable donde guardamos la generacion del token
+    const objetoUsuario = {                                // en Application muestra object
+        email: valueEmail,
+        password: valuePassword,
+    };
 
-     
+    const token = generateToken(objetoUsuario.email, objetoUsuario.password);                //variable que genera el token con la funcion generateToken()
+    localStorage.setItem("token", token);                            //para ingresar el token al session/localstorage con la variable donde guardamos la generacion del token
 
-    let timerInterval
+      let timerInterval
 
     Swal.fire({
      title: 'Cargando...',
@@ -50,14 +53,18 @@ function sesion(event){
 }
 
 function generateToken(email, password) {
-    return email + password
+    const usuario = {
+        email,
+        password,
+    };
+    return JSON.stringify(usuario);
 }
 
 function tokenExistente(){                                                              // funcion para verificar si el token existe 
-    if (sessionStorage.getItem("token") !== null){
+    if (localStorage.getItem("token") !== null){
         return true;
         } else {
-            return false;
+        return false;
         }
 }
 
