@@ -139,7 +139,7 @@ td.desaprobado{
     width: 100px;
     height: 50px;
     background-color: rgb(207, 4, 4);
-    font-size: 24px;
+    font-size: 20px;
     color: whitesmoke;
     border-radius: 10px;
     border-bottom-right-radius: 0;
@@ -170,3 +170,7 @@ td.desaprobado{
     margin: 100px;
 }
 
+.image{
+    width: 135px;
+    height: 100px;
+}

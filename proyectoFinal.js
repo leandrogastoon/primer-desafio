@@ -107,6 +107,18 @@ function agregarAlumno(){
 
 function listaActualizada(){
     tablaAlumn.innerHTML="";
+
+fetch('https://rickandmortyapi.com/api/character/7,8')
+  .then((character) => character.json()
+  .then((res) => {
+    aparecerImagen(res);
+    })
+  );
+  
+    
+  function aparecerImagen(res){
+    let image = res[1].image;
+    let image2 = res[0].image;
     
     alumnos.forEach(alumno => {
         const tablaHTML = document.createElement("tr")
@@ -127,7 +139,7 @@ function listaActualizada(){
             <td>${parseInt(alumno.nota2)}</td>
             <td>${parseInt(alumno.nota3)}</td>
             <td>${(parseInt(alumno.nota1) + parseInt(alumno.nota2) + parseInt(alumno.nota3)) / 3}</td>
-            <td class="aprobado">APROBADO</td>`
+            <td class="aprobado">APROBADO<img class="image" src="${image}" alt=""></td>`
         } else {
             tablaHTML.innerHTML = `
             <td id="nombreAlum">${alumno.nombre}</td>
@@ -136,7 +148,7 @@ function listaActualizada(){
             <td>${parseInt(alumno.nota2)}</td>
             <td>${parseInt(alumno.nota3)}</td>
             <td>${(parseInt(alumno.nota1) + parseInt(alumno.nota2) + parseInt(alumno.nota3)) / 3}</td>
-            <td class="desaprobado">DESAPROBADO</td>`
+            <td class="desaprobado">DESAPROBADO<img class="image" src="${image2}" alt=""></td>`
         };
 
         
@@ -145,6 +157,7 @@ function listaActualizada(){
         
         
     });
+  }
 }
  
 
