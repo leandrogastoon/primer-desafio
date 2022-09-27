@@ -108,7 +108,7 @@ function agregarAlumno(){
 function listaActualizada(){
     tablaAlumn.innerHTML="";
 
-fetch('https://rickandmortyapi.com/api/character/7,8')
+fetch('https://rickandmortyapi.com/api/character/7,8')               //API Rick y Morty
   .then((character) => character.json()
   .then((res) => {
     aparecerImagen(res);
@@ -116,7 +116,7 @@ fetch('https://rickandmortyapi.com/api/character/7,8')
   );
   
     
-  function aparecerImagen(res){
+  function aparecerImagen(res){                           //al seleccionar en la url los personajes 7 y 8, nos lo muestra en un array, entonces hay que llamarlos con sus posiciones dentro de ese array
     let image = res[1].image;
     let image2 = res[0].image;
     
