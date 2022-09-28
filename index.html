@@ -117,7 +117,66 @@
      </div>
   </div>
 
+  <!--formulario ingreso de nuevos alumnos-->
 
+  <div>
+    <div class="tituloFormNe">
+      <h2>Ingreso de nuevos estudiantes</h2>
+    </div>
+    <form class="row g-3 formNuevosAlumnos" name="formNuevosAlumnos">
+      <div class="col-md-4">
+        <label for="validationDefault01" class="form-label">Nombre</label>
+        <input type="text" class="form-control" name="alNuevo" id="validationDefault01" required>
+      </div>
+      <div class="col-md-4">
+        <label for="validationDefault02" class="form-label">Apellido</label>
+        <input type="text" class="form-control" name="apNuevo" id="validationDefault02" required>
+      </div>
+      <div class="col-md-4">
+        <label for="validationDefaultUsername" class="form-label">Email</label>
+        <div class="input-group">
+          <input type="email" name="emailNu"  class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <label for="validationDefault03" class="form-label">Provincia</label>
+        <select class="form-select" id="validationDefault03" name="prov" required>
+          <option selected disabled >Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="validationDefault04" class="form-label">Localidad</label>
+        <select class="form-select" id="validationDefault04" name="local" required>
+          <option selected disabled  >Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="validationDefault05" class="form-label">Division</label>
+        <input type="text" class="form-control" name="divisionNueva" id="validationDefault05" required>
+      </div>
+      <div class="col-md-2">
+        <label for="validationDefault05" class="form-label">Edad</label>
+        <input type="number" class="form-control" name="edadNueva"  id="validationDefault06" required>
+      </div>
+      <div class="col-md-2">
+        <label for="validationDefault05" class="form-label">D.N.I.</label>
+        <input type="number" class="form-control" name="dni"  id="validationDefault07" required>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="invalidCheck2" required>
+          <label class="form-check-label" for="invalidCheck2">
+            Acepto los terminos y condiciones
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" onclick="alumNuevos()" type="submit">Aceptar</button>
+      </div>
+    </form>
+  </div>
 
 
 
@@ -139,6 +198,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
     <script src="proyectoFinal.js"></script>
+    <!-- <script src="desafio-3.js"></script> -->
 </body>
 
 </html>

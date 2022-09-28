@@ -180,7 +180,42 @@ const tablaNueva = document.querySelector(".tablaNueva"); //lo hice para limpiar
                   }  
                 }).showToast();
         } 
+
+
+//--------------------------Formulario Nuevos Estudiantes-------------------//
+
+// class alumListaNuevos {
+//   constructor(nombre, apellido, email, provincia, localidad, division, edad, dni){
+//       this.nombre = nombre;
+//       this.materia = apellido;
+//       this.email = email;
+//       this.provincia = provincia;
+//       this.localidad = localidad;
+//       this.division = division;
+//       this.edad = edad;
+//       this.dni = dni;
+//   }
+  
+// }
+
+// let alumnosNuevos = [];
+
+// function alumNuevos (alumnosNuevos) {
+//   const addAlumno2 = document.querySelector(".formNuevosAlumnos");
+//     const newAlumno2 = new alumListaNuevos(
+//         addAlumno2.alNuevo.value, 
+//         addAlumno2.apNuevo.value, 
+//         addAlumno2.emailNu.value, 
+//         addAlumno2.prov.value,
+//         addAlumno2.local.value,
+//         addAlumno2.divisionNueva.value, 
+//         addAlumno2.edadNueva.value,
+//         addAlumno2.dni.value,
+//         );
+//         alumnosNuevos.push(newAlumno2);
+        
+// }
         
 
-
+// console.log(alumnosNuevos);
 
