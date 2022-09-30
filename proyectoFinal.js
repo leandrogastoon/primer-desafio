@@ -184,38 +184,65 @@ const tablaNueva = document.querySelector(".tablaNueva"); //lo hice para limpiar
 
 //--------------------------Formulario Nuevos Estudiantes-------------------//
 
-// class alumListaNuevos {
-//   constructor(nombre, apellido, email, provincia, localidad, division, edad, dni){
-//       this.nombre = nombre;
-//       this.materia = apellido;
-//       this.email = email;
-//       this.provincia = provincia;
-//       this.localidad = localidad;
-//       this.division = division;
-//       this.edad = edad;
-//       this.dni = dni;
-//   }
-  
-// }
+class nuevosAlum {
+  constructor(nombre, apellido, telefono, provincia, localidad, division, edad, dni){
+   this.nombre = nombre;
+   this.apellido = apellido;
+   this.telefono = telefono;
+   this.provincia = provincia;
+   this.localidad = localidad;
+   this.division = division;
+   this.edad = edad;
+   this.dni = dni;
+  }
+}
+     
+let formNuevo = [];
 
-// let alumnosNuevos = [];
+function saveForm(){
+  const formAlum = document.querySelector('#formNuevosAlumnos');
+  const newAlum = new nuevosAlum(
+      formAlum.alNuevo.value,
+      formAlum.apNuevo.value,
+      formAlum.tel.value,
+      formAlum.prov.value,
+      formAlum.local.value,
+      formAlum.divisionNueva.value,
+      formAlum.edad.value,
+      formAlum.dni.value,
+      );
+      formNuevo.push(newAlum);
+      console.log(formNuevo);
+      agregarTarjetas();
+}
 
-// function alumNuevos (alumnosNuevos) {
-//   const addAlumno2 = document.querySelector(".formNuevosAlumnos");
-//     const newAlumno2 = new alumListaNuevos(
-//         addAlumno2.alNuevo.value, 
-//         addAlumno2.apNuevo.value, 
-//         addAlumno2.emailNu.value, 
-//         addAlumno2.prov.value,
-//         addAlumno2.local.value,
-//         addAlumno2.divisionNueva.value, 
-//         addAlumno2.edadNueva.value,
-//         addAlumno2.dni.value,
-//         );
-//         alumnosNuevos.push(newAlumno2);
-        
-// }
-        
+const tarjetas = document.querySelector(".contenido");
 
-// console.log(alumnosNuevos);
+function agregarTarjetas(){
+  tarjetas.innerHTML="";
 
+  formNuevo.forEach(tarjeta => {
+    const tarjHTML = document.createElement("div");
+
+    tarjHTML.innerHTML = 
+    `<div class="contIcono">
+      <div class ="cosas">
+        <div class="cont2">
+          <img src="/img/user.png" class="icono" alt="">    
+        </div> 
+        <div>
+          <h3>Nom:${tarjeta.nombre}</h3>
+          <h3>Apell:${tarjeta.apellido}</h3>
+          <h3>tel:${tarjeta.telefono}</h3>
+          <h3>Prov:${tarjeta.provincia}</h3>
+          <h3>Loc:${tarjeta.localidad}</h3>
+          <h3>Div:${tarjeta.division}</h3>
+          <h3>edad:${tarjeta.edad}</h3>
+          <h3>dni:${tarjeta.dni}</h3>
+        </div>
+      </div>  
+    </div>`
+    
+        tarjetas.appendChild(tarjHTML);
+  })
+}

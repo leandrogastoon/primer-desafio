@@ -170,7 +170,43 @@ td.desaprobado{
     margin: 100px;
 }
 
+
 .image{
     width: 135px;
     height: 100px;
+}
+
+/*estilo tarjetas*/
+
+.contenido{
+    display: flex;
+}
+
+.contIcono{
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);   
+    border-radius: 10px;
+    width: 150px;
+    height: 300px;
+    margin: 10px;
+}
+
+.cosas{
+}
+
+.cont2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono{
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+}
+
+h3{
+    color: whitesmoke;
+    font-size: 16px;
+    margin-left: 5px;
 }
