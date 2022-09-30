@@ -185,11 +185,10 @@ const tablaNueva = document.querySelector(".tablaNueva"); //lo hice para limpiar
 //--------------------------Formulario Nuevos Estudiantes-------------------//
 
 class nuevosAlum {
-  constructor(nombre, apellido, telefono, provincia, localidad, division, edad, dni){
+  constructor(nombre, apellido, telefono, localidad, division, edad, dni){
    this.nombre = nombre;
    this.apellido = apellido;
    this.telefono = telefono;
-   this.provincia = provincia;
    this.localidad = localidad;
    this.division = division;
    this.edad = edad;
@@ -205,7 +204,6 @@ function saveForm(){
       formAlum.alNuevo.value,
       formAlum.apNuevo.value,
       formAlum.tel.value,
-      formAlum.prov.value,
       formAlum.local.value,
       formAlum.divisionNueva.value,
       formAlum.edad.value,
@@ -234,7 +232,6 @@ function agregarTarjetas(){
           <h3>Nom:${tarjeta.nombre}</h3>
           <h3>Apell:${tarjeta.apellido}</h3>
           <h3>tel:${tarjeta.telefono}</h3>
-          <h3>Prov:${tarjeta.provincia}</h3>
           <h3>Loc:${tarjeta.localidad}</h3>
           <h3>Div:${tarjeta.division}</h3>
           <h3>edad:${tarjeta.edad}</h3>
