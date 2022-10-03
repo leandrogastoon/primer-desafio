@@ -40,6 +40,7 @@ body{
     border: none;
     color: whitesmoke;
     border-bottom: solid 1px rgb(117, 117, 117);
+    outline: none;
 }
 
 
@@ -176,21 +177,42 @@ td.desaprobado{
     height: 100px;
 }
 
+/*estilo form ingreso de nuevos estudiantes*/
+
+.contIngreso-1{
+    margin-top: 200px;
+    border-radius: 15px;
+    padding: 15px;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);   
+    color: whitesmoke;
+}
+
+.tituloFormNe{
+    margin-bottom: 20px;
+}
+
+.btnForm-2{
+    margin-top: 20px;
+}
+
+
+
 /*estilo tarjetas*/
+
 
 .contenido{
     display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .contIcono{
-    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);   
+    box-sizing: border-box;
+    width: 100%;
+    background-image: linear-gradient(to top, #6a11cb 0%, #2575fc 100%);   
     border-radius: 10px;
-    width: 150px;
-    height: 300px;
-    margin: 10px;
-}
-
-.cosas{
+    height: 300px;  
+    border-right: 7px solid rgb(29, 29, 29);
 }
 
 .cont2{
@@ -202,11 +224,12 @@ td.desaprobado{
 .icono{
     width: 70px;
     height: 70px;
-    margin: 5px;
+    margin: 15px 5px;
 }
 
 h3{
     color: whitesmoke;
     font-size: 16px;
-    margin-left: 5px;
+    margin: 5px;
+    
 }

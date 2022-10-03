@@ -224,7 +224,6 @@ function agregarTarjetas(){
 
     tarjHTML.innerHTML = 
     `<div class="contIcono">
-      <div class ="cosas">
         <div class="cont2">
           <img src="/img/user.png" class="icono" alt="">    
         </div> 
@@ -237,7 +236,6 @@ function agregarTarjetas(){
           <h3>edad:${tarjeta.edad}</h3>
           <h3>dni:${tarjeta.dni}</h3>
         </div>
-      </div>  
     </div>`
     
         tarjetas.appendChild(tarjHTML);
