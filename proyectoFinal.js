@@ -19,7 +19,7 @@ function sesion(event){
 
     Swal.fire({
      title: 'Cargando...',
-     timer: 1000,
+     timer: 500,
      timerProgressBar: true,
        didOpen: () => {
          Swal.showLoading()
@@ -225,7 +225,7 @@ function agregarTarjetas(){
     tarjHTML.innerHTML = 
     `<div class="contIcono">
         <div class="cont2">
-          <img src="/img/user.png" class="icono" alt="">    
+        <i class="fa fa-4x fa-user-circle icono" aria-hidden="true"></i>    
         </div> 
         <div>
           <h3>Nom:${tarjeta.nombre}</h3>
